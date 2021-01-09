@@ -18,6 +18,8 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import AttendanceList from "../attendance/AttendanceList";
+import {mainListItems, secondaryListItems} from "./ListItem";
 
 
 function Copyright() {
@@ -162,9 +164,9 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-        {/* <List>{mainListItems}</List>
+        <List>{mainListItems}</List>
         <Divider />
-        <List>{secondaryListItems}</List> */}
+        <List>{secondaryListItems}</List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
@@ -173,7 +175,7 @@ export default function Dashboard() {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                {/* <Chart /> */}
+                <AttendanceList />
               </Paper>
             </Grid>
             {/* Recent Deposits */}
