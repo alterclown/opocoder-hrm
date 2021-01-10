@@ -14,12 +14,14 @@ import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import AttendanceList from "../attendance/AttendanceList";
-import {mainListItems, secondaryListItems} from "./ListItem";
+import ListItems, {mainListItems, secondaryListItems} from "./ListItem";
+import { BrowserRouter as Router,Switch, Route, Link} from "react-router-dom";
+import CompanyList from '../company/CompanyList';
+
 
 
 function Copyright() {
@@ -118,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Dashboard() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -142,7 +144,7 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
+            OptoCoder HRM
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -164,36 +166,38 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-        <List>{mainListItems}</List>
+        <List><ListItems/></List>
         <Divider />
-        <List>{secondaryListItems}</List>
+        {/* <List>{secondaryListItems}</List> */}
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-            {/* Chart */}
+        <AttendanceList />
+        <CompanyList/>
+          {/* <Grid container spacing={3}>
+            Chart
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
                 <AttendanceList />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+            Recent Deposits
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                {/* <Deposits /> */}
+                <Deposits />
               </Paper>
             </Grid>
-            {/* Recent Orders */}
+            Recent Orders
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                {/* <Orders /> */}
+               /
               </Paper>
             </Grid>
           </Grid>
           <Box pt={4}>
-            {/* <Copyright /> */}
-          </Box>
+            <Copyright />
+          </Box> */}
         </Container>
       </main>
     </div>
