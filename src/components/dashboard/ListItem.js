@@ -120,7 +120,7 @@ function ListItems() {
                 <ListItemText primary={"Attendance"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/company" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <LayersIcon />
@@ -128,7 +128,7 @@ function ListItems() {
                 <ListItemText primary={"Company"} />
               </ListItem>
             </Link>
-          <Link to="/attendance" className={classes.link}>
+          <Link to="/department" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <AssignmentIcon />
@@ -136,7 +136,7 @@ function ListItems() {
                 <ListItemText primary={"Department"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/employee" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -144,7 +144,7 @@ function ListItems() {
                 <ListItemText primary={"Employee"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/leave" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -152,7 +152,7 @@ function ListItems() {
                 <ListItemText primary={"Leave"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/loan" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -160,7 +160,7 @@ function ListItems() {
                 <ListItemText primary={"Loan"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/payroll" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -168,7 +168,7 @@ function ListItems() {
                 <ListItemText primary={"Payroll"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/position" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -176,7 +176,7 @@ function ListItems() {
                 <ListItemText primary={"Position"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/project" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -184,7 +184,7 @@ function ListItems() {
                 <ListItemText primary={"Project"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/salary" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -192,7 +192,7 @@ function ListItems() {
                 <ListItemText primary={"Salary"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/tax" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -200,7 +200,7 @@ function ListItems() {
                 <ListItemText primary={"Tax"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/training" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <BarChartIcon />
@@ -208,7 +208,7 @@ function ListItems() {
                 <ListItemText primary={"Training"} />
               </ListItem>
             </Link>
-            <Link to="/attendance" className={classes.link}>
+            <Link to="/user" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                 <PeopleIcon />
@@ -228,7 +228,7 @@ function ListItems() {
               </Typography>
             </Container> */}
           </Route>
-          <Route exact path="/about">
+          <Route exact path="/">
             <Container>
               <Typography variant="h3" gutterBottom>
                 About
